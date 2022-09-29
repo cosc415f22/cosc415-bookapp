@@ -1,5 +1,9 @@
 class BooksController < ApplicationController
   def index
-    @message = "My head be spinning."
+    @books = Book.all.order(:list_price)
+  end
+
+  def show
+    @book = Book.find(params[:id])
   end
 end

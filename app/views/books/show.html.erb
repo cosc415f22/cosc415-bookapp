@@ -1,0 +1,22 @@
+<h1> Book  details </h1>
+
+<dl>
+<dt> Title</dt>
+<dd> <%= @book.title %> </dd>
+
+<dt> Publisher</dt>
+<dd> <%= @book.publisher %> </dd>
+
+<dt> Year</dt>
+<dd> <%= @book.year %> </dd>
+
+<dt> Pages</dt>
+<dd> <%= @book.pages %> </dd>
+
+<dt> List price</dt>
+<dd> <%= @book.list_price %> </dd>
+</dl>
+
+<br>
+
+<%= link_to "Back to index", books_path, :class => "btn btn-primary"  %>
