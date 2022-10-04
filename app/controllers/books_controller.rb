@@ -12,15 +12,17 @@ class BooksController < ApplicationController
   end
 
   def create
-    b = Book.new(create_params) # "mass assignment" of attributes!
-    if b.save
+    @book = Book.new(create_params) # "mass assignment" of attributes!
+    if @book.save
       flash[:notice] = "Book #{b.title} successfully created"
       redirect_to books_path
     else
       flash[:warning] = "Book couldn't be created"
-      # redirect_to new_book_path
-      @book = b
       render 'new'
+      # rendering explicitly to new path can be better because of
+      # being able to "fill in" the form with existing data in @book
+      #
+      # redirect_to new_book_path
     end
   end
 
