@@ -14,7 +14,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(create_params) # "mass assignment" of attributes!
     if @book.save
-      flash[:notice] = "Book #{b.title} successfully created"
+      flash[:notice] = "Book #{@book.title} successfully created"
       redirect_to books_path
     else
       flash[:warning] = "Book couldn't be created"
