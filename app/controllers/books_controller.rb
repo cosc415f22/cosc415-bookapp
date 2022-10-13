@@ -18,9 +18,11 @@ class BooksController < ApplicationController
       redirect_to books_path
     else
       flash[:warning] = "Book couldn't be created"
-      # redirect_to new_book_path
-      @book = b
       render 'new'
+      # rendering explicitly to new path can be better because of
+      # being able to "fill in" the form with existing data in @book
+      #
+      # redirect_to new_book_path
     end
   end
 
