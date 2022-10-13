@@ -20,3 +20,7 @@
 <br>
 
 <%= link_to "Back to index", books_path, :class => "btn btn-primary"  %>
+
+<%= link_to "Edit book details", edit_book_path(@book), :class => "btn btn-secondary"  %>
+
+<%= link_to "Delete book", book_path(@book), :method => :delete, :class => "btn btn-warning"  %>
