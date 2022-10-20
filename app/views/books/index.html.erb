@@ -1,3 +1,11 @@
+<div class="searchbox">
+  <%= form_with url: books_path, local: true, method: :get do %>
+  <%= label_tag "title_search" %>
+  <%= text_field_tag "title_search", nil, maxlength: 10 %>
+  <%= submit_tag "Search" %>
+  <% end %>
+</div>
+
 <table class="table">
   <thead>
     <caption>All books</caption>
