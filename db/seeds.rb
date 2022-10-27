@@ -7,3 +7,8 @@ Book.create!(title: "Crime and Punishment", pages: 900, publisher: "Unknown", ye
 Book.create!(title: "What we owe to each other", pages: 432, publisher: "Belknap Press", year: 2000, list_price: 31.39)
 Book.create!(title: "Let's go (so we can get back)", pages: 287, year: 2018, publisher: "Dutton", list_price: 19.19)
 Book.create!(title: "The essential Calvin and Hobbes", pages: 255, year: 1988, publisher: "Andrew and McMeel Books", list_price: 13.13)
+
+
+# Author name, dob, dod, biography
+# Review title, review, rating
+# ReviewAuthor name, biography
