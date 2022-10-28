@@ -54,6 +54,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'random-word'
 end
 
 group :development do
