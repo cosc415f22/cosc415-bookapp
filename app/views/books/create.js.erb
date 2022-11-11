@@ -1,0 +1,5 @@
+console.log("Create succeeded!");
+jQuery("#bookcreate")[0].reset();
+jQuery("#flash").text("<%= escape_javascript @book.title %> created.");
+jQuery("#flash").show();
+jQuery("#flash").fadeOut(3000);

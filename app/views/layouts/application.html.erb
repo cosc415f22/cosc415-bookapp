@@ -12,6 +12,8 @@
   </head>
 
   <body>
+    <div id="flash" class="alert alert-primary hidden">
+    </div>
     <% if flash[:notice] %>
       <div class="alert alert-primary">
         <%= "#{flash[:notice]}" %>

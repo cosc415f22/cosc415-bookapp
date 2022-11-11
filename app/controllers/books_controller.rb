@@ -19,10 +19,16 @@ class BooksController < ApplicationController
   end
 
   def create
-    b = Book.new(create_update_params) # "mass assignment" of attributes!
-    if b.save
-      flash[:notice] = "Book #{b.title} successfully created"
-      redirect_to books_path
+    @book = Book.new(create_update_params) # "mass assignment" of attributes!
+    respond_to do |format|
+    if @book.save
+      format.html do
+        flash[:notice] = "Book #{@book.title} successfully created"
+        redirect_to books_path
+      end
+      format.js do
+        render :create, layout: false, content_type: 'application/javascript'
+      end
     else
       flash[:warning] = "Book couldn't be created"
       render 'new'
@@ -31,6 +37,7 @@ class BooksController < ApplicationController
       #
       # redirect_to new_book_path
     end
+  end
   end
 
   def edit

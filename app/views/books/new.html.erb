@@ -1,5 +1,5 @@
 <%# in app/views/books/new.html.erb %>
-<%= form_with model: @book, local: true do |book_form| %>
+<%= form_with model: @book, local: false, format: :js, id: "bookcreate" do |book_form| %>
 
   <%=render 'form_template', book_form: book_form %>
 
